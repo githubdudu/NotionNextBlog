@@ -299,3 +299,147 @@ img {
   @keyframes l1 {
   0% {background-position: right}
 }
+
+/*  Custom CSS @author: dudu */
+
+/* Define font family variables */
+/* Font imported: Shon, Source Serif 4, Expletus Sans, Kanit */
+
+#theme-hexo {
+  --font-sans:
+    'Shon', 'PingFang SC', -apple-system, BlinkMacSystemFont,
+    'Hiragino Sans GB', 'Microsoft YaHei', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Segoe UI', 'Noto Sans SC', HarmonyOS_Regular, 'Helvetica Neue', Helvetica,
+    'Source Han Sans SC', Arial, sans-serif, 'Apple Color Emoji';
+  --font-serif:
+    'Source Serif 4', Bitter, 'Noto Serif SC', SimSun, 'Times New Roman', Times,
+    serif, 'Segoe UI Emoji', 'Segoe UI Symbol', 'Apple Color Emoji';
+}
+
+/* Override Tailwind font-family settings*/
+/* ----------font -------------- */
+/* Apply new font sans variable to existing class */
+#theme-hexo.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Apply new font serif variable to existing class */
+#theme-hexo.font-serif {
+  font-family: var(--font-serif);
+}
+
+
+/* Site Title / Header use art feel font: Expletus Sans */
+#theme-hexo #sticky-nav > div > div:first-child div,
+#header > div > div:first-child {
+  font-family: 'Expletus Sans', sans-serif;
+}
+
+/* ---------- Color -------------- */
+/* Custom Color for #sticky-nav */
+#theme-hexo #sticky-nav {
+  /* background-color: rgb(36, 36, 36); TODO: 需要改代码*/ 
+  backdrop-filter: blur(10px);
+}
+
+/* Custom color for the header cover */
+#theme-hexo #header-cover {
+  filter: saturate(0.9) grayscale(0.3) brightness(0.8);
+}
+#theme-hexo #header > div {
+  z-index: 10;
+}
+
+/* ------------ Disable animation  -------------- */
+#theme-hexo #header > div > div:last-child > * {
+  animation: none;
+}
+
+/* ---------- Layout -------------- */
+/* Custom Layout for blog card text part */
+#theme-hexo #blog-post-card article {
+  header h2 .menu-link {
+    @apply text-neutral-800;
+  }
+
+  header h2 ~ div {
+    /* hide the category of the post */
+    @apply hidden;
+  }
+
+  /* Decrease the margin of the abstract */
+  main {
+    @apply text-neutral-500;
+    @apply text-base;
+    @apply leading-5;
+  }
+
+  /* adjust layout of the date */
+  a:has(i) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+
+/* adjust the color of the post image */
+#theme-hexo #blog-post-card img {
+  filter: saturate(0.5) brightness(1.02) contrast(0.85) grayscale(0.3);
+}
+#theme-hexo #blog-post-card:hover img {
+  /* Remove the filter when hovering */
+  filter: none;
+}
+
+#theme-hexo #sideRight > div > div img {
+  /* adjust the color of the right panel image */
+  filter:  opacity(0.8);
+}
+#theme-hexo #sideRight > div > div section > a:hover img {
+  /* Remove the filter for latest post panel */
+  filter: none;
+}
+#theme-hexo #sideRight > div > div img:hover {
+  /* Remove the filter for avatar */
+  filter: none;
+}
+
+
+
+/* ------------Post page ------------ */
+#theme-hexo .notion-text {
+  width: 100%;
+  white-space: pre-wrap;
+  word-break: break-word;
+  
+  /* medium */
+  font-family: "source serif 4";
+  padding: 2px 2px !important;
+  margin: 2.14em 0 -0.46em !important;
+  font-size: 20px !important;
+  line-height: 32px !important;
+  @apply text-neutral-800;
+  @apply dark:text-neutral-200;
+ 
+}
+
+#theme-hexo #notion-article {
+  h2 {
+    margin: 1.95em  0 -0.28em !important;
+  }
+  h3 {
+    margin: 1.72em  0 -0.31em !important;
+  }
+  h4 {
+    margin: 1.5em  0 -0.33em !important;
+  }
+  h2 + *, h3 + *, h4 + * {
+    margin-top: 0.4em !important;
+  }
+}
+
+#theme-hexo .notion-code, #theme-hexo #notion-article blockquote, #theme-hexo #notion-article figure {
+  /* medium */
+  margin-top: 42px;
+}
+
