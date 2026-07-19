@@ -357,9 +357,12 @@ img {
 
 /* ---------- Layout -------------- */
 /* Custom Layout for blog card text part */
+  /* HEXO_COLOR_TITLE: '#242424', // From Medium
+  HEXO_COLOR_TITLE_DARK: 'c4c4c4', // 基于上一个，同属于 neutral */
 #theme-hexo #blog-post-card article {
   header h2 .menu-link {
     @apply text-neutral-800;
+    @apply dark:text-neutral-300;
   }
 
   header h2 ~ div {

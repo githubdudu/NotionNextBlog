@@ -44,6 +44,12 @@ const CONFIG = {
 
   HEXO_COLOR_PRIMARY: '#928CEE',
   HEXO_THEME_COLOR: '#928CEE', // 主题色配置（默认为 #928CEE）
+  HEXO_COLOR_PRIMARY_DARK: '#4C4EA8', // primary 基于 oklch 亮度变换得到
+  HEXO_COLOR_BG: '#F8F8F8', // From Atlassian Neutral100
+  HEXO_COLOR_BG_DARK: '#1F1F21', // From Atlassian DarkNeutral100
+  HEXO_COLOR_CARD_DARK: 'rgba(255, 255, 255, 0.05)', // material-ui 的 surface 颜色 添加透明白色
+  HEXO_COLOR_TITLE: '#242424', // From Medium
+  HEXO_COLOR_TITLE_DARK: 'c4c4c4', // 基于上一个，同属于 neutral
 
   /** 文章详情页客户端切换时，主栏显示卡片+转圈占位（无全屏遮罩；已有独立 LoadingCover 的主题无需此项） */
   HEXO_ARTICLE_ROUTE_LOADING: true
